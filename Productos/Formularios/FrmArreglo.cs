@@ -46,6 +46,7 @@ namespace Productos.Formularios
 
                     double promedio = EdadDao.edades.Average();
                     lblPromedio.Text = $"Promedio: {promedio}";
+                    //prueba
                 }
             }
         }
