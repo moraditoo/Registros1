@@ -16,7 +16,14 @@ namespace Productos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            using (Login login = new Login())
+            {
+                if(login.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new FrmPrincipal());
+                }
+                
+            }
         }
     }
 }

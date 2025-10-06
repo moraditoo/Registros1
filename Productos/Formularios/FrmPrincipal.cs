@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Productos.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,13 +25,18 @@ namespace Productos
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FrmProduct().Show();
+            new FrmProducto().Show();
         }
-
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void edadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArreglo frm = new FrmArreglo();
+            frm.ShowDialog();
         }
     }
 }
